@@ -1,0 +1,48 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "send_whatsapp_brochure",
+      "description": "Sends the ElevateBox product brochure and eCommerce pricing catalog to the user via WhatsApp when they express high interest.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "phone_number": {
+            "type": "string",
+            "description": "The user's 10-digit WhatsApp phone number with country code."
+          },
+          "business_category": {
+            "type": "string",
+            "description": "The customer's business category (e.g., retail, apparel, electronics)."
+          }
+        },
+        "required": ["phone_number"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "schedule_callback",
+      "description": "Schedules a dedicated follow-up voice call with an ElevateBox sales executive for warm leads.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "preferred_time": {
+            "type": "string",
+            "description": "The preferred time slot requested by the user."
+          },
+          "preferred_date": {
+            "type": "string",
+            "description": "The preferred date for the callback."
+          },
+          "contact_number": {
+            "type": "string",
+            "description": "Phone number to reach back on."
+          }
+        },
+        "required": ["preferred_time", "contact_number"]
+      }
+    }
+  }
+]
